@@ -43,5 +43,20 @@
 
     <p class="note">Tip: los datos se actualizan reemplazando los CSV en sus carpetas y haciendo commit.</p>
   </div>
+
+ <script>
+(async function autoLoad(){
+  const url = "./data/MB121282.CSV?ts=" + Date.now();
+  const res = await fetch(url, { cache:"no-store" });
+  if(!res.ok){ console.warn("No pude cargar", url); return; }
+  const text = await res.text();
+
+  // Usa la misma función que procesa cuando subes un archivo
+  // (en tu dashboard existe: handleCsvFile)
+  await handleCsvFile(new File([text], "MB121282.CSV", {type:"text/csv"}));
+})();
+</script>
+ 
+  
 </body>
 </html>
