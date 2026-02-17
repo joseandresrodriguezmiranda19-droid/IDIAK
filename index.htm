@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboards — IDIAK</title>
+  <style>
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#0b1220;color:#e5e7eb}
+    .wrap{max-width:980px;margin:0 auto;padding:32px}
+    .title{font-size:28px;font-weight:800;margin:0 0 6px}
+    .sub{opacity:.85;margin:0 0 24px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .card{background:#0f1a33;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0 0 14px;opacity:.85;line-height:1.35}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700}
+    .btn2{background:#22c55e}
+    .note{margin-top:22px;opacity:.75;font-size:13px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);margin-right:8px;font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="pill">IDIAK</div>
+    <div class="pill">Áreas</div>
+
+    <h1 class="title">Panel de Dashboards</h1>
+    <p class="sub">Selecciona el área para ver el dashboard.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>🏭 Almacén de Puros</h3>
+        <p>Dispositivos MB121281 y MB121285 (temperatura/humedad).</p>
+        <a class="btn" href="./almacen/">Abrir Almacén</a>
+      </div>
+
+      <div class="card">
+        <h3>🧤 Escogida</h3>
+        <p>Dispositivo MB121282 (temperatura/humedad).</p>
+        <a class="btn btn2" href="./escogida/">Abrir Escogida</a>
+      </div>
+    </div>
+
+    <p class="note">Tip: los datos se actualizan reemplazando los CSV en sus carpetas y haciendo commit.</p>
+  </div>
+</body>
+</html>
